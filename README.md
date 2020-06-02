@@ -1,4 +1,4 @@
-# star-war-swift
+# star-wars-swift
 
 
 THis is IOS demo of star-war project. 
