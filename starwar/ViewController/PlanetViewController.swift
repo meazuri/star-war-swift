@@ -13,7 +13,7 @@ class PlanetViewController: UIViewController ,UITableViewDataSource, UITableView
     @IBOutlet weak var planetTableView: UITableView!
     private var planets = [Planet]()
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         planetTableView.delegate = self
@@ -22,12 +22,12 @@ class PlanetViewController: UIViewController ,UITableViewDataSource, UITableView
         
         DataService.shared.fetchPlanets { (result) in
             switch result {
-                case .success(let planetsResponse):
-                    self.planets = planetsResponse.results
-                    
+            case .success(let planetsResponse):
+                self.planets = planetsResponse.results
                 
-                case .failure(let error):
-                    print(error)
+                
+            case .failure(let error):
+                print(error)
             }
             
             DispatchQueue.main.async {
@@ -36,29 +36,29 @@ class PlanetViewController: UIViewController ,UITableViewDataSource, UITableView
             }
         }
     }
-
-
-    //MARK : TableView Data source
+    
+    
+    //MARK: TableView Data source
     
     func numberOfSections(in tableView: UITableView) -> Int {
         1
     }
     
-      func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.planets.count
-      }
-      
-      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-                  let cellIdentifier = "PlanetTableViewCell"
-                  guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)  as? PlanetTableViewCell else {
-                      fatalError("The dequeued cell is not an instance of PlanetTableViewCell.")
-                  }
-                let planet = self.planets[indexPath.row]
-                cell.lblName.text = planet.name
-                cell.lblTerrain.text = planet.climate
-                return cell
-      }
-  
+        let cellIdentifier = "PlanetTableViewCell"
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)  as? PlanetTableViewCell else {
+            fatalError("The dequeued cell is not an instance of PlanetTableViewCell.")
+        }
+        let planet = self.planets[indexPath.row]
+        cell.lblName.text = "Planet : \( planet.name ?? "-")"
+        cell.lblTerrain.text = "Climate : \(planet.climate ?? "-")"
+        return cell
+    }
+    
 }
 

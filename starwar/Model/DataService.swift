@@ -48,4 +48,33 @@ class DataService {
             }
         }.resume()
     }
+    
+    func fetchFilms(completion: @escaping (Result<FilmsResponse,Error>)-> Void )  {
+           
+           let component = createURLComponents(path: "/api/films/")
+           guard let composedURL = component.url else {
+               print("URL creation failed...")
+                          return
+           }
+           URLSession.shared.dataTask(with: composedURL){ (data,response ,error) in
+               
+               if let httpResponse = response as? HTTPURLResponse {
+                   print("API status: \(httpResponse.statusCode)")
+
+               }
+               
+               guard let validData = data ,error == nil else {
+                   completion(.failure(error!))
+                   return
+               }
+               
+               do {
+                   let films = try JSONDecoder().decode(FilmsResponse.self, from: validData)
+                   completion(.success(films))
+
+               }catch let serializationError {
+                   completion(.failure(serializationError))
+               }
+           }.resume()
+       }
 }

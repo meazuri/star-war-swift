@@ -92,15 +92,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dgq-aB-6S8">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="113" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dgq-aB-6S8">
                                 <rect key="frame" x="16" y="60" width="382" height="769"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="83" id="GcQ-dk-qdU">
-                                        <rect key="frame" x="0.0" y="28" width="382" height="83"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FilmsTableViewCell" rowHeight="113" id="GcQ-dk-qdU" customClass="FilmTableViewCell" customModule="starwar" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="382" height="113"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GcQ-dk-qdU" id="7Sd-er-T6Y">
-                                            <rect key="frame" x="0.0" y="0.0" width="382" height="83"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="382" height="113"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Luke Skywalker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lha-5D-Dfl">
@@ -110,21 +110,35 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="19BBY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="exf-hc-0U3">
-                                                    <rect key="frame" x="20" y="40" width="342" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <rect key="frame" x="20" y="40" width="342" height="14.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="txc-64-ayE">
+                                                    <rect key="frame" x="20" y="62.5" width="342" height="16"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="txc-64-ayE" firstAttribute="trailing" secondItem="7Sd-er-T6Y" secondAttribute="trailingMargin" id="6oQ-AY-HX6"/>
+                                                <constraint firstItem="txc-64-ayE" firstAttribute="leading" secondItem="7Sd-er-T6Y" secondAttribute="leadingMargin" id="BER-XZ-Is5"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="exf-hc-0U3" secondAttribute="trailing" id="IyK-uw-R83"/>
                                                 <constraint firstItem="lha-5D-Dfl" firstAttribute="leading" secondItem="7Sd-er-T6Y" secondAttribute="leadingMargin" id="Mwj-BA-qY3"/>
                                                 <constraint firstItem="exf-hc-0U3" firstAttribute="top" secondItem="lha-5D-Dfl" secondAttribute="bottom" constant="8" id="RaU-Jw-PCM"/>
+                                                <constraint firstItem="txc-64-ayE" firstAttribute="top" secondItem="exf-hc-0U3" secondAttribute="bottom" constant="8" id="mzc-bU-eMe"/>
                                                 <constraint firstItem="exf-hc-0U3" firstAttribute="leading" secondItem="7Sd-er-T6Y" secondAttribute="leadingMargin" id="oO6-KF-kDD"/>
                                                 <constraint firstItem="lha-5D-Dfl" firstAttribute="trailing" secondItem="7Sd-er-T6Y" secondAttribute="trailingMargin" id="sSQ-cf-QmN"/>
                                                 <constraint firstItem="lha-5D-Dfl" firstAttribute="top" secondItem="7Sd-er-T6Y" secondAttribute="topMargin" id="z1K-v3-7Pp"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lblDirector" destination="exf-hc-0U3" id="9N9-Xx-AZP"/>
+                                            <outlet property="lblFilmName" destination="lha-5D-Dfl" id="HhG-R9-vm7"/>
+                                            <outlet property="lblProducer" destination="txc-64-ayE" id="nDO-jf-vD7"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -139,6 +153,9 @@
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Star War Films" image="film" catalog="system" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="filmsTableView" destination="dgq-aB-6S8" id="Gvb-Hv-gds"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>

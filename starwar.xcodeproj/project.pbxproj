@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4905C36724879D0A004AB54D /* FilmsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4905C36624879D0A004AB54D /* FilmsResponse.swift */; };
+		4905C36924879D5F004AB54D /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4905C36824879D5F004AB54D /* Film.swift */; };
+		4905C36B24879EA0004AB54D /* FilmTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4905C36A24879EA0004AB54D /* FilmTableViewCell.swift */; };
 		49CEFC54247F8DE600771477 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CEFC53247F8DE600771477 /* AppDelegate.swift */; };
 		49CEFC56247F8DE600771477 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CEFC55247F8DE600771477 /* SceneDelegate.swift */; };
 		49CEFC58247F8DE600771477 /* PlanetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CEFC57247F8DE600771477 /* PlanetViewController.swift */; };
@@ -40,6 +43,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4905C36624879D0A004AB54D /* FilmsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsResponse.swift; sourceTree = "<group>"; };
+		4905C36824879D5F004AB54D /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
+		4905C36A24879EA0004AB54D /* FilmTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmTableViewCell.swift; sourceTree = "<group>"; };
 		49CEFC50247F8DE600771477 /* starwar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = starwar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49CEFC53247F8DE600771477 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49CEFC55247F8DE600771477 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -144,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				49E589A324862A86002F6453 /* PlanetTableViewCell.swift */,
+				4905C36A24879EA0004AB54D /* FilmTableViewCell.swift */,
 			);
 			path = ViewsAndAssets;
 			sourceTree = "<group>";
@@ -154,6 +161,8 @@
 				49E589A624863617002F6453 /* DataService.swift */,
 				49E589A824863BF5002F6453 /* Planet.swift */,
 				49E589AA24868F14002F6453 /* PlanetsResponse.swift */,
+				4905C36624879D0A004AB54D /* FilmsResponse.swift */,
+				4905C36824879D5F004AB54D /* Film.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -299,9 +308,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				49CEFC5A247F8DE600771477 /* FilmsViewController.swift in Sources */,
+				4905C36724879D0A004AB54D /* FilmsResponse.swift in Sources */,
 				49CEFC58247F8DE600771477 /* PlanetViewController.swift in Sources */,
+				4905C36B24879EA0004AB54D /* FilmTableViewCell.swift in Sources */,
 				49CEFC54247F8DE600771477 /* AppDelegate.swift in Sources */,
 				49E589A724863617002F6453 /* DataService.swift in Sources */,
+				4905C36924879D5F004AB54D /* Film.swift in Sources */,
 				49E589A924863BF5002F6453 /* Planet.swift in Sources */,
 				49CEFC56247F8DE600771477 /* SceneDelegate.swift in Sources */,
 				49E589AB24868F14002F6453 /* PlanetsResponse.swift in Sources */,
